@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Designer Facts</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #e6f7ff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        li:hover {
+            background-color: #b3e0ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Map Designer Facts</h1>
+        <ul id="facts-list"></ul>
+    </div>
+    <script>
+        const mapDesignerFacts = [
+            "I have mapped over 500 hidden trails across five countries.",
+            "I use a combination of GPS technology and traditional compass navigation.",
+            "I have a collection of over 50 hand-drawn maps.",
+            "I often collaborate with local historians to uncover forgotten paths.",
+            "I have discovered secret spots that are now popular tourist destinations.",
+            "I enjoy hiking and have trekked through some of the most remote areas.",
+            "I am fluent in the languages of the countries where I map trails."
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const factsList = document.getElementById('facts-list');
+            mapDesignerFacts.forEach(fact => {
+                const listItem = document.createElement('li');
+                listItem.textContent = fact;
+                factsList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>
