@@ -14,6 +14,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column;
         }
 
         .container {
@@ -23,16 +24,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             width: 100%;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
             color: #333;
         }
 
         ul {
             list-style-type: none;
             padding: 0;
+            margin-top: 20px;
         }
 
         li {
@@ -53,11 +55,27 @@
             margin-right: 10px;
             font-size: 1.5em;
         }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🗺️Map Designer Facts✨</h1>
+        <button id="generate-facts">Generate Fact</button>
         <ul id="facts-list"></ul>
     </div>
     <script>
@@ -71,12 +89,22 @@
             { fact: "I am fluent in the languages of the countries where I map trails.", emoji: "🗣️" }
         ];
 
+        let currentFactIndex = 0;
+
         document.addEventListener('DOMContentLoaded', () => {
+            const generateButton = document.getElementById('generate-facts');
             const factsList = document.getElementById('facts-list');
-            mapDesignerFacts.forEach(item => {
-                const listItem = document.createElement('li');
-                listItem.innerHTML = `<span class="emoji">${item.emoji}</span>${item.fact}`;
-                factsList.appendChild(listItem);
+
+            generateButton.addEventListener('click', () => {
+                if (currentFactIndex < mapDesignerFacts.length) {
+                    const item = mapDesignerFacts[currentFactIndex];
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<span class="emoji">${item.emoji}</span>${item.fact}`;
+                    factsList.appendChild(listItem);
+                    currentFactIndex++;
+                } else {
+                    alert("All facts have been displayed!");
+                }
             });
         });
     </script>
