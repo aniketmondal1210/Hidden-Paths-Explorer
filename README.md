@@ -1,6 +1,6 @@
-# HiddenPathsExplorer
+# Hidden Paths Explorer
 
-**HiddenPathsExplorer** is a web-based project showcasing fascinating facts and stories about hidden trails and secret spots around the world. Built with HTML, CSS, and JavaScript, this platform offers an interactive experience to inspire exploration and adventure.
+**Hidden Paths Explorer** is a web-based project showcasing fascinating facts and stories about hidden trails and secret spots around the world. Built with HTML, CSS, and JavaScript, this platform offers an interactive experience to inspire exploration and adventure.
 
 ## Features
 
